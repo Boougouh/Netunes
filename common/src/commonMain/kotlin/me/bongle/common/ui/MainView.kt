@@ -1,30 +1,27 @@
-package me.bongle.common
+package me.bongle.common.ui
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
+import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.Color
-import me.bongle.common.layout.main.BottomBar
-import me.bongle.common.player.PlayerSettings
+import me.bongle.common.data.model.PlayerState
+import me.bongle.common.ui.layout.player.MusicPlayer
+import me.bongle.common.ui.layout.player.MusicPlayerViewModel
 
 @Composable
-fun App() {
+fun MainView() {
 
-    val settings = PlayerSettings()
+    val musicPlayer = remember {
+        MusicPlayerViewModel(PlayerState())
+    }
 
     Theme {
-        Column(modifier = Modifier.fillMaxSize().background(Color.White)) {
-            Box(Modifier.weight(1f)) {
-
-            }
-            BottomBar(settings)
+        Surface {
+            MusicPlayer(musicPlayer)
         }
     }
 
