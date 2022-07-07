@@ -9,5 +9,4 @@ class PlayerState {
     var playStatus by mutableStateOf<PlayStatus>(PlayStatus.Pause(Song("Test", "Test")))
     var shuffled by mutableStateOf(false)
 
-
 }

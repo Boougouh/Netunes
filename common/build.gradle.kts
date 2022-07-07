@@ -57,7 +57,3 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
-
-dependencies {
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
-}

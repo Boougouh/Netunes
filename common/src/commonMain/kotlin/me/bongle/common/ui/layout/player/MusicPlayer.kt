@@ -102,6 +102,7 @@ fun Settings(model: MusicPlayerViewModel) {
     ) {
         BarItemWithAnime(painterResource(Res.Icon.LIST), Color.Black, size = 14.dp)
         BarItemWithAnime(painterResource(Res.Icon.SHUFFLE), Color.Black, size = 14.dp)
+        // Shuffle Button
         BarItemWithAnime(
             painterResource(Res.Icon.SHUFFLE),
             if (shuffled) {
